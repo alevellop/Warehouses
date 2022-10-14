@@ -1,0 +1,27 @@
+<h2>Warehouses List</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Warehouse</th>
+      <th>Client</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let warehouse of warehouses">
+      <td> {{warehouse.uuid}} </td>
+      <td> {{warehouse.client}} </td>
+      <td> {{warehouse.family}} </td>
+      <td> {{warehouse.size}} </td>
+      <td>
+        <button (click)="editWarehouse(warehouse.id)" class="btn btn-info">Edit</button>
+        <button (click)="viewWarehouse(warehouse.id)" class="btn btn-info ml-10">Details</button>
+        <button (click)="deleteWarehouse(warehouse.id)" class="btn btn-danger ml-10">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<a [routerLink]="['create']" class="btn btn-success float-right">Add</a>

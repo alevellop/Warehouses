@@ -1,0 +1,46 @@
+<h3>Warehouse details</h3>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th scope="row">Warehouse</th>
+          <td>{{warehouse.uuid}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Client</th>
+          <td>{{warehouse.client}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Type</th>
+          <td>{{warehouse.family}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Size</th>
+          <td>{{warehouse.size}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-6" *ngIf="racks.length > 0">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Instalation</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rack of racks">
+          <td> {{rack.uuid}} </td>
+          <td> {{rack.type}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<a [routerLink]="['']" class="btn btn-info float-left">Back</a>

@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "a4b7a90e-9169-4b0e-a839-b498c8c81d7d",
+		"name": "Warehouses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllWarehouses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/warehouses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPermutations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/permutations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permutations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRacksTypeByFamily",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/racks-type/EST",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks-type",
+						"EST"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllFamilies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/rackstype/families",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rackstype",
+						"families"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRacksType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/racks-type",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks-type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRacksByWarehouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/1/racks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"1",
+						"racks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWarehouse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"family\" : \"ROB\",\r\n    \"uuid\": \"123123123\",\r\n    \"client\" : \"client A\",\r\n    \"size\" : \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/warehouses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRackByWarehouse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"family\" : \"ROB\",\r\n    \"uuid\": \"123123123\",\r\n    \"client\" : \"client A\",\r\n    \"size\" : \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/5/racks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"5",
+						"racks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRacksType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"family\" : \"ROB\",\r\n    \"type\": \"E\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/racks-type",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks-type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWarehouseById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/warehouses/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouses",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRackById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/racks/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteWarehouseById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/warehouses/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouses",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRack",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/racks/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRacksType",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/racks-type/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"racks-type",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editWarehouse",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"family\" : \"EFD\",\r\n    \"uuid\": \"123123123\",\r\n    \"client\" : \"client A\",\r\n    \"size\" : \"10\",\r\n    \"racks\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/warehouses/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouses",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
